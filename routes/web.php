@@ -18,29 +18,35 @@ Route::get('/', function () {
 });
 
 // route to users - string
-Route::get('/users', function(){
-    return 'welcome to users page';
-});
+// Route::get('/users', function(){
+//     return 'welcome to users page';
+// });
 
 // route to users - array(iNTO JSON ALWAYS)
-Route::get('/users', function(){
-    return['IT', 'IS', 'TRIAL'];
-});
+// Route::get('/users', function(){
+//     return['IT', 'IS', 'TRIAL'];
+// });
 
 // route to users - JSON(iNTO JSON ALWAYS)
-Route::get('/users', function(){
-    return response()->json([
-        'name'=>'JUSTIN',
-        'student'=>'still learning',
-        'content'=>'Laravel class'
-    ]);
-});
+// Route::get('/users', function(){
+//     return response()->json([
+//         'name'=>'JUSTIN',
+//         'student'=>'still learning',
+//         'content'=>'Laravel class'
+//     ]);
+// });
 
 
 // route to users - function
-Route::get('/users',function(){
-    return redirect('/');
+// Route::get('/users',function(){
+//     return redirect('/');
+// });
+
+// creating first other page
+Route::get('/users', function(){
+    return view('home');
 });
 
-// firstproject.com ==/
-// firstproject.com/users == /users
+//endpoints sample
+// homepage endpoint ==/
+// project/users == /users
