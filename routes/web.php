@@ -37,5 +37,10 @@ Route::get('/users', function(){
 });
 
 
+// route to users - function
+Route::get('/users',function(){
+    return redirect('/');
+});
+
 // firstproject.com ==/
 // firstproject.com/users == /users
