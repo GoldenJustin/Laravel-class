@@ -20,7 +20,11 @@ use App\Http\Controllers\ProductsController;
 
 
 // returning routes rather than view in blade.php
-Route::get('/products', [ProductsController::class, 'index']);
+// Route::get('/products', [ProductsController::class, 'index']);
+
+// New way of defining routes using string 
+Route::get('/products', 'App\Http\Controllers\ProductsController@index');
+Route::get('/products/users', [ProductsController::class, 'about']);
 
 
 // route to users - string

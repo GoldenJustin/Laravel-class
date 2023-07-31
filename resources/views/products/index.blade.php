@@ -7,5 +7,6 @@
 </head>
 <body>
     <h1>products</h1>
+    <p>{{ $title }}</p>
 </body>
 </html>
