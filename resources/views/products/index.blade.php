@@ -8,6 +8,7 @@
 <body>
     <h1>products</h1>
 
-    <p>{{ $products }}</p>
+    <!-- Named route -->
+<a href="{{ route ('products') }}">Products</a>
 </body>
 </html>

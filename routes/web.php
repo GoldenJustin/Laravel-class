@@ -23,10 +23,17 @@ use App\Http\Controllers\ProductsController;
 // Route::get('/products', [ProductsController::class, 'index']);
 
 // New way of defining routes using string 
-Route::get('/products', 'App\Http\Controllers\ProductsController@index');
-Route::get('/products/users', [ProductsController::class, 'about']);
+// Route::get('/products', 'App\Http\Controllers\ProductsController@index');
 
-Route::get('/products/{name}', [ProductsController::class, 'show']);
+// Named routes
+Route::get('/products', [ProductsController::class, 'index'])->name('products');
+
+
+//pattern is an integer
+// Route::get('/products/{id}', [ProductsController::class, 'show'])-> where ('id', '[0-9]+');
+
+//pattern is an string
+// Route::get('/products/{name}/{id}', [ProductsController::class, 'show'])-> where (['name'=>'[a-zA-Z]+', 'id'=>'[0-9]+']);
 
 
 // route to users - string
@@ -55,9 +62,9 @@ Route::get('/products/{name}', [ProductsController::class, 'show']);
 // });
 
 // creating first other page
-Route::get('/users', function(){
-    return view('home');
-});
+// Route::get('/users', function(){
+//     return view('home');
+// });
 
 //endpoints sample
 // homepage endpoint ==/
