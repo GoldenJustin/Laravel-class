@@ -26,6 +26,8 @@ use App\Http\Controllers\ProductsController;
 Route::get('/products', 'App\Http\Controllers\ProductsController@index');
 Route::get('/products/users', [ProductsController::class, 'about']);
 
+Route::get('/products/{name}', [ProductsController::class, 'show']);
+
 
 // route to users - string
 // Route::get('/users', function(){

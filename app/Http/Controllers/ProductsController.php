@@ -23,10 +23,19 @@ class ProductsController extends Controller
         // compact way of returning data
         // return view('products.index', compact('title', 'description'));
 
-        return view('products.index', ['data'=> $data]);
+        // return view('products.index', ['data'=> $data]);
     }
 
     public function about(){
         return "this is about us page";
+    }
+    public function show($name){
+        $data = [
+            'Iphone'=>'Iphone',
+            'Samsung'=>'Samsung'
+        ];
+        return view('products.index', [
+            'products'=> $data[$name] ?? 'product '. $name . ' Dont exist'
+        ]);
     }
 }
