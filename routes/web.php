@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\ProductsController;
+use App\Http\Controllers\PagesController;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,7 +26,8 @@ use App\Http\Controllers\ProductsController;
 // Route::get('/products', 'App\Http\Controllers\ProductsController@index');
 
 // Named routes
-Route::get('/products', [ProductsController::class, 'index'])->name('products');
+Route::get('/', [PagesController::class, 'index']);
+Route::get('/about', [PagesController::class, 'about']);
 
 
 //pattern is an integer
@@ -54,6 +55,7 @@ Route::get('/products', [ProductsController::class, 'index'])->name('products');
 //         'content'=>'Laravel class'
 //     ]);
 // });
+
 
 
 // route to users - function
