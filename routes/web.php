@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PagesController;
+use App\Http\Controllers\PostsController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -71,3 +73,7 @@ Route::get('/about', [PagesController::class, 'about']);
 //endpoints sample
 // homepage endpoint ==/
 // project/users == /users
+
+
+// posts request
+Route::get('/posts', [PostsController::class, 'index']);

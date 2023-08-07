@@ -18,11 +18,8 @@
         rel="stylesheet"
         href="https://use.fontawesome.com/releases/v5.0.7/css/all.css"
     />
-    <style>
-        .active{
-            color: orange;
-        }
-    </style>
+    <link rel="stylesheet" href="{{ asset ('css/app.css') }}">
+   
 </head>
 
 <body>
